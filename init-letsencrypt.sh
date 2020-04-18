@@ -5,7 +5,7 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(cloud.health-couch.com.au)
+domains=(health-couch.com.au www.health-couch.com.au)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="jethro.kairys@gmail.com" # Adding a valid address is strongly recommended
