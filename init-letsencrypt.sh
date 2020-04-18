@@ -5,11 +5,11 @@ if ! [ -x "$(command -v docker-compose)" ]; then
   exit 1
 fi
 
-domains=(health-couch.com.au www.health-couch.com.au)
+domains=(health-couch.com.au www.health-couch.com.au health-couch.com www.health-couch.com thehealthcouch.com.au www.thehealthcouch.com.au)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="jethro.kairys@gmail.com" # Adding a valid address is strongly recommended
-staging=1                       # Set to 1 if you're testing your setup to avoid hitting request limits
+staging=0                       # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if [ -d "$data_path" ]; then
   read -p "Existing data found for $domains. Continue and replace existing certificate? (y/N) " decision
