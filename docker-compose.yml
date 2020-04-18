@@ -20,9 +20,11 @@ services:
   api:
     image: jethro/health-couch:api-latest
     restart: unless-stopped
-    environment: {}
-      
-    
+    volumes:
+      - ./api/environment:/opt/app/.env:ro
+    env_file:
+     - ./api/environment
+
   certbot:
     image: certbot/certbot
     restart: unless-stopped
