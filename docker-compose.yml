@@ -20,6 +20,8 @@ services:
   api:
     image: jethro/health-couch:api-latest
     restart: unless-stopped
+    environment: {}
+      
     
   certbot:
     image: certbot/certbot
