@@ -1,5 +1,3 @@
 EMAIL_TO=help@health-couch.com.au
 EMAIL_SERVER=aspmx.l.google.com
-EMAIL_PORT='25'
-EMAIL_SSL='false'
 API_KEY=SOME_API_KEY
