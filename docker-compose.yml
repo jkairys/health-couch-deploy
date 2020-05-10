@@ -14,11 +14,11 @@ services:
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   
   ui:
-    image: jethro/health-couch:ui-0.2.4
+    image: jethro/health-couch:ui-0.2.7
     restart: unless-stopped
   
   api:
-    image: jethro/health-couch:api-0.2.0
+    image: jethro/health-couch:api-0.2.1
     restart: unless-stopped
     volumes:
       - ./api/environment:/opt/app/.env:ro
