@@ -14,7 +14,11 @@ services:
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
   
   ui:
+<<<<<<< HEAD
     image: jethro/health-couch:ui-0.2.11
+=======
+    image: jethro/health-couch:ui-0.2.10
+>>>>>>> 3030e0e39f1d5b1ce8e53d14333ab128f0bda176
     restart: unless-stopped
   
   api:
